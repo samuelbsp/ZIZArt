@@ -1,0 +1,212 @@
+@charset "utf8";
+@import 'reset';
+
+$font:'Lora', serif;
+$fontTitre:'Lobster', cursive;
+
+
+$bigFont:3.5em;
+$mediumFont:2.5em;
+$smallFont:2em;
+$smallerFont:1.5em;
+$littleFont:1.3em;
+$veryLittleFont:1.2em;
+
+@mixin transition($second){
+	-webkit-transition:all $second ease-in-out;
+	-moz-transition:all $second ease-in-out;
+	-o-transition:all $second ease-in-out;
+	-ms-transition: all $second ease;  
+	transition:all $second ease-in-out;
+}
+h1,h2,h3,h4{
+	font-family:$fontTitre;
+}
+p,li{
+	font-family:$font;
+}
+
+html,body{
+	height:100%;
+}
+header{
+	nav{
+		width:94%;
+		height:57px;
+		background-color:rgba(6,6,6,0.8);
+		padding:13px 3% 13px 3%;
+		color:white;
+		position:fixed;
+		z-index:10;
+		
+		h1{
+			font-size:$bigFont;
+			display:inline-block;
+			opacity:1;
+			@include transition(1500ms);
+		}
+		.titreIntro{
+			opacity:0;
+			@include transition(1500ms);	
+		}
+		ul{
+			float:right;
+			margin:17px 0 0 0;
+			width:80%;
+			font-size:$smallerFont;
+
+			li{
+				float:right;
+				display:inline-block;
+				padding:0 2% 0 2%;
+				opacity:1;
+				@include transition(1500ms);
+			}
+			li:hover{
+				padding:0.5% 2% 0 2%;
+				@include transition(500ms);
+			}
+			.navIntro{
+				margin-right:-20%;
+				opacity:0;
+				@include transition(1500ms);
+			}
+			a{
+				color:white;
+			}
+		}
+	}
+}
+.conteneurPrincipal{
+    height: 100%;
+	width:100%;
+
+	.contenu{
+		float:left;
+    	overflow: scroll;
+    	height:100%;
+	}
+	#partieGauche{
+		width:50%;
+		background-color:white;
+		text-align:center;
+
+		.texteGauche{
+			padding:0 10%;
+		}
+
+		#logo{
+			margin:250px 0 55px 0;
+		}
+		h2{
+			font-size:$mediumFont;
+		}
+		p{
+			text-align:left;
+			line-height:25px;
+		}
+		.personnages{
+			margin-top:120px;
+			width:20%;
+			@include transition(500ms);
+		}
+		.grosPersonnages{
+			width:28%;
+		}
+		.titreSection{
+			font-size:$smallFont;
+			font-weight:100;
+			margin:30px 0 75px 0;
+		}
+		#moi{
+			width:100%;
+			height:auto;
+			overflow:hidden;
+
+			.texteMoi{
+				font-size:$veryLittleFont;
+				font-weight:50;
+				width:45%;
+				padding:0 5% 0 0;
+				height:auto;
+				float:left;
+				text-align:left;
+			}
+			.texteMoi:last-child{
+				padding:0 0 0 5%;
+			}
+		}
+		.texteSection{
+			font-size:$littleFont;
+			font-weight:50;		
+		}
+		.titreParagraphe{
+			text-align:left;
+			font-size:$smallerFont;
+			font-weight:600;
+			margin:50px 0 30px 0; 
+		}
+		.listeMateriel{
+			font-size:$veryLittleFont;
+			text-align:left;
+			list-style-type: disc;
+			list-style-position: inside;
+		}
+		.pExercices{
+			margin:0;
+			font-size:$veryLittleFont;
+		}
+		.nomExercice{
+			font-weight:bold;
+		}
+		.separationExercice{
+			margin-bottom:30px;
+		}
+		.tarifs{
+			width:100%;
+		}
+		.titreInfos{
+			margin-top:25px;
+		}
+		.informations{
+			text-align:left; 
+			margin-bottom:40px;
+		}
+		footer{
+			width:100%;
+			height:auto;
+			padding:30px 0 30px 0;
+			background-color:rgba(6,6,6,0.9);
+			text-align:center;
+			color:white;
+
+			.personnageFooter{
+				margin-bottom:10px;
+				width:25%;
+			}
+			h3{
+				font-size:$smallFont;
+				margin:10px 0 70px 0;
+			}
+			p{
+				font-size:$veryLittleFont;
+				text-align:center;
+			}
+			.droits{
+				margin-top:30px;
+			}
+		}
+	}
+	#partieDroite{
+		background-color:black;
+		width:50%;
+		
+		li{
+			list-style-type:none;
+		}
+		.imagesDroite{
+			width:100%;
+			float:left;
+		}
+	}
+}
