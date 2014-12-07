@@ -1,6 +1,7 @@
 $(document).ready(
 function() {
 
+
 $("#partieGauche").niceScroll();
 $("#partieDroite").niceScroll();
 $("#partieDroite").getNiceScroll().hide();
@@ -14,21 +15,18 @@ $("#partieDroite").getNiceScroll().hide();
   setTimeout(function(){
     $( "#titrePrincipal" ).removeClass( "titreIntro" );
   },100);
-  setTimeout(function(){
-    $( "#li5" ).removeClass( "navIntro" );
-  },100);
-  setTimeout(function(){
     $( "#li4" ).removeClass( "navIntro" );
-  },500);
   setTimeout(function(){
     $( "#li3" ).removeClass( "navIntro" );
-  },900);
+  },500);
   setTimeout(function(){
     $( "#li2" ).removeClass( "navIntro" );
-  },1300);
+  },1000);
   setTimeout(function(){
     $( "#li1" ).removeClass( "navIntro" );
-  },1700);
+  },1500);
+
+  $('a').smoothScroll();
 
 
 
@@ -80,6 +78,5 @@ function supprimerImages(){
   $('.conteneurImages').children('ul:first-child').remove();
   }
 }
-
 
 });

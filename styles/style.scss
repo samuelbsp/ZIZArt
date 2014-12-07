@@ -69,7 +69,7 @@ header{
 			.navIntro{
 				margin-right:-20%;
 				opacity:0;
-				@include transition(1500ms);
+				@include transition(500ms);
 			}
 			a{
 				color:white;
@@ -112,6 +112,9 @@ header{
 		}
 		.grosPersonnages{
 			width:28%;
+		}
+		.petitPersonnages{
+			width:17%;
 		}
 		.titreSection{
 			font-size:$smallFont;
@@ -170,7 +173,15 @@ header{
 		}
 		.informations{
 			text-align:left; 
-			margin-bottom:40px;
+		}
+		.textesTemoignages{
+			text-align:center;
+			font-style:italic;
+			margin-bottom:35px;
+		}
+		.auteurTemoignages{
+			text-align:center;
+			margin-bottom:60px;
 		}
 		footer{
 			width:100%;
