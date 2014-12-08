@@ -25,8 +25,11 @@ $("#partieDroite").getNiceScroll().hide();
   setTimeout(function(){
     $( "#li1" ).removeClass( "navIntro" );
   },1500);
-
-  $('a').smoothScroll();
+  
+    $("a").click(function(event){     
+        event.preventDefault();
+        $('#partieGauche').animate({scrollTop:$(this.hash).offset().top-90}, 500);
+    });
 
 
 

@@ -11,6 +11,7 @@ $smallFont:2em;
 $smallerFont:1.5em;
 $littleFont:1.3em;
 $veryLittleFont:1.2em;
+$tinyFont:1em;
 
 @mixin transition($second){
 	-webkit-transition:all $second ease-in-out;
@@ -24,7 +25,7 @@ h1,h2,h3,h4{
 }
 p,li{
 	font-family:$font;
-}
+} 
 
 html,body{
 	height:100%;
@@ -127,13 +128,14 @@ header{
 			overflow:hidden;
 
 			.texteMoi{
-				font-size:$veryLittleFont;
+				font-size:$tinyFont;
 				font-weight:50;
 				width:45%;
 				padding:0 5% 0 0;
 				height:auto;
 				float:left;
-				text-align:left;
+				text-align:justify;
+
 			}
 			.texteMoi:last-child{
 				padding:0 0 0 5%;
