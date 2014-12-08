@@ -26,9 +26,19 @@ $("#partieDroite").getNiceScroll().hide();
     $( "#li1" ).removeClass( "navIntro" );
   },1500);
   
-    $("a").click(function(event){     
-        event.preventDefault();
-        $('#partieGauche').animate({scrollTop:$(this.hash).offset().top-90}, 500);
+ $('a').click(function() {
+        $.smoothScroll({
+            scrollElement: $('#partieGauche'),
+            scrollTarget: $(this).attr('href')
+        });
+        return false;
+    });
+  $('a').click(function() {
+        $.smoothScroll({
+            scrollElement: $('#partieDroite'),
+            scrollTarget: $(this).attr('href')
+        });
+        return false;
     });
 
 
