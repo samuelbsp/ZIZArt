@@ -18,13 +18,13 @@ $("#partieDroite").getNiceScroll().hide();
     $( "#li4" ).removeClass( "navIntro" );
   setTimeout(function(){
     $( "#li3" ).removeClass( "navIntro" );
-  },700);
+  },500);
   setTimeout(function(){
     $( "#li2" ).removeClass( "navIntro" );
-  },1100);
+  },1000);
   setTimeout(function(){
     $( "#li1" ).removeClass( "navIntro" );
-  },1600);
+  },1500);
   
  $('a').click(function() {
         $.smoothScroll({
