@@ -12,6 +12,9 @@ $littleFont:1.3em;
 $veryLittleFont:1.2em;
 $tinyFont:1em;
 
+$tablet: "(min-width: 0px) and (max-width: 1023px)";
+$mobile: "(min-width: 0px) and (max-width: 780px)";
+
 @mixin transition($second){
 	-webkit-transition:all $second ease-in-out;
 	-moz-transition:all $second ease-in-out;
@@ -24,7 +27,7 @@ h1,h2,h3,h4{
 }
 p,li{
 	font-family:$font;
-} 
+} 	
 
 html,body{
 	height:100%;
@@ -36,16 +39,19 @@ html,body{
 	text-align:center;
 
 	img{
-		margin-top:40px;
+		margin-top:80px;
+		width:25%;
 	}
 	h1{
-		font-size:3em;
+		font-size:$smallFont;
+		position:absolute;
+		bottom:65px;
 	}
 	.titreGauche{
-		float:left;
+		left:40px;
 	}
 	.titreDroite{
-		float:right;
+		right:40px;
 	}
 }
 header{
@@ -57,6 +63,10 @@ header{
 		color:white;
 		position:fixed;
 		z-index:10;
+		
+		@media #{$mobile} {
+	    	text-align:center;
+	  	}	
 		
 		h1{
 			font-size:$bigFont;
@@ -70,11 +80,16 @@ header{
 		}
 		ul{
 			float:right;
-			margin:17px 0 0 0;
-			width:80%;
-			font-size:$smallerFont;
+			margin-top:19px;
+			width:70%;
+			font-size:$veryLittleFont;
+
+			@media #{$mobile} {
+	    		display:none;
+	  		}	
 
 			li{
+				font-family:$fontTitre !important;
 				float:right;
 				display:inline-block;
 				padding:0 2% 0 2%;
@@ -82,12 +97,12 @@ header{
 				@include transition(1500ms);
 			}
 			li:hover{
-				padding:0.5% 2% 0 2%;
+				margin-top:-5px;
 				@include transition(500ms);
 			}
 			.navIntro{
-				margin-right:-20%;
 				opacity:0;
+				margin-top:-500px;
 				@include transition(500ms);
 			}
 			a{
@@ -109,6 +124,10 @@ header{
 		width:50%;
 		background-color:white;
 		text-align:center;
+	
+		@media #{$tablet} {
+	    	width:100%;
+	  	}	
 
 		.texteGauche{
 			padding:0 10%;
@@ -152,7 +171,13 @@ header{
 				padding:0 5% 0 0;
 				height:auto;
 				float:left;
-				text-align:justify;
+				text-align:left;
+
+				@media #{$mobile} {
+	    			width:90%;
+	    			padding:0 5% 0 5%;
+	    			margin-top:20px;
+	  			}	
 
 			}
 			.texteMoi:last-child{
@@ -160,7 +185,7 @@ header{
 			}
 		}
 		.texteSection{
-			font-size:$littleFont;
+			font-size:$tinyFont;
 			font-weight:50;		
 		}
 		.titreParagraphe{
@@ -170,14 +195,14 @@ header{
 			margin:50px 0 30px 0; 
 		}
 		.listeMateriel{
-			font-size:$veryLittleFont;
+			font-size:$tinyFont;
 			text-align:left;
 			list-style-type: disc;
 			list-style-position: inside;
 		}
 		.pExercices{
 			margin:0;
-			font-size:$veryLittleFont;
+			font-size:$tinyFont;
 		}
 		.nomExercice{
 			font-weight:bold;
@@ -189,10 +214,14 @@ header{
 			width:100%;
 		}
 		.titreInfos{
-			margin-top:25px;
+			margin:25px 0 10px 0;
 		}
 		.informations{
-			text-align:left; 
+			text-align:left;
+
+			ul{
+				line-height: 20px;
+			} 
 		}
 		.textesTemoignages{
 			text-align:center;
@@ -220,7 +249,7 @@ header{
 				margin:10px 0 70px 0;
 			}
 			p{
-				font-size:$veryLittleFont;
+				font-size:$tinyFont;
 				text-align:center;
 			}
 			.droits{
@@ -231,6 +260,10 @@ header{
 	#partieDroite{
 		background-color:black;
 		width:50%;
+
+		@media #{$tablet} {
+    	display:none;
+  		}
 		
 		li{
 			list-style-type:none;

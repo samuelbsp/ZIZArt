@@ -14,17 +14,20 @@ $("#partieDroite").getNiceScroll().hide();
 
   setTimeout(function(){
     $( "#titrePrincipal" ).removeClass( "titreIntro" );
-  },100);
-    $( "#li4" ).removeClass( "navIntro" );
+  },200);
+    $( "#li1" ).removeClass( "navIntro" );
+  setTimeout(function(){
+    $( "#li2" ).removeClass( "navIntro" );
+  },400);
   setTimeout(function(){
     $( "#li3" ).removeClass( "navIntro" );
   },700);
   setTimeout(function(){
-    $( "#li2" ).removeClass( "navIntro" );
-  },1100);
+    $( "#li4" ).removeClass( "navIntro" );
+  },1000);
   setTimeout(function(){
-    $( "#li1" ).removeClass( "navIntro" );
-  },1600);
+    $( "#li5" ).removeClass( "navIntro" );
+  },1300);
   
  $('a').click(function() {
         $.smoothScroll({
