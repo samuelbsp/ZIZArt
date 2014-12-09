@@ -1,12 +1,10 @@
 $(document).ready(
 function() {
 
-
 $("#partieGauche").niceScroll();
 $("#partieDroite").niceScroll();
 $("#partieDroite").getNiceScroll().hide();
 
-//$("#images li").css("height", $(".imagesDroite").innerHeight());
   var a=20;
   var lastScroll = 0;
   var images= $('#partieDroite');
@@ -43,8 +41,7 @@ $("#partieDroite").getNiceScroll().hide();
         });
         return false;
     });
-
-
+  $("#journal").css({ "background-size": $("#journal").innerHeight()+" 100%" })
 
 $("#partieGauche").scroll(function() {
  a=$("#partieDroite").scrollTop();

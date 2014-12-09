@@ -131,6 +131,7 @@ header{
 
 		.texteGauche{
 			padding:0 10%;
+			z-index:5;
 		}
 
 		#logo{
@@ -184,31 +185,48 @@ header{
 				padding:0 0 0 5%;
 			}
 		}
-		.texteSection{
-			font-size:$tinyFont;
-			font-weight:50;		
+		.sectionsBg{
+			background-image:url(../images/bgGris.png);
+			background-size:100% 100%;
+			background-position:0 70px;
+			background-repeat:no-repeat;
 		}
-		.titreParagraphe{
-			text-align:left;
-			font-size:$smallerFont;
-			font-weight:600;
-			margin:50px 0 30px 0; 
+		.finBg{
+			height:150px;
+			width:100%;
+			background-image:url(../images/bgGrisFin.png);
+			background-size:100% 100%;
 		}
-		.listeMateriel{
-			font-size:$tinyFont;
-			text-align:left;
-			list-style-type: disc;
-			list-style-position: inside;
+		#journal{
+			.texteSection{
+				font-size:$tinyFont;
+				font-weight:50;		
+			}
+			.titreParagraphe{
+				text-align:left;
+				font-size:$smallerFont;
+				font-weight:600;
+				margin:50px 0 30px 0; 
+			}
+			.listeMateriel{
+				font-size:$tinyFont;
+				text-align:left;
+				list-style-type: disc;
+				list-style-position: inside;
+			}
+			.pExercices{
+				margin:0;
+				font-size:$tinyFont;
+			}
+			.nomExercice{
+				font-weight:bold;
+			}
+			.separationExercice{
+				margin-bottom:30px;
+			}
 		}
-		.pExercices{
-			margin:0;
-			font-size:$tinyFont;
-		}
-		.nomExercice{
-			font-weight:bold;
-		}
-		.separationExercice{
-			margin-bottom:30px;
+		#couts{
+			margin-top:0px;
 		}
 		.tarifs{
 			width:100%;
@@ -223,14 +241,16 @@ header{
 				line-height: 20px;
 			} 
 		}
-		.textesTemoignages{
-			text-align:center;
-			font-style:italic;
-			margin-bottom:35px;
-		}
-		.auteurTemoignages{
-			text-align:center;
-			margin-bottom:60px;
+		#lesTemoignages{
+			.textesTemoignages{
+				text-align:center;
+				font-style:italic;
+				margin-bottom:35px;
+			}
+			.auteurTemoignages{
+				text-align:center;
+				padding-bottom:90px;
+			}
 		}
 		footer{
 			width:100%;
@@ -239,14 +259,26 @@ header{
 			background-color:rgba(6,6,6,0.9);
 			text-align:center;
 			color:white;
+			position:relative;
 
 			.personnageFooter{
-				margin-bottom:10px;
-				width:25%;
+				position:absolute;
+				top:-11%;
+				left:40%;
+				//margin-bottom:40px;
+				width:20%;
+
+				@media #{$mobile} {
+	    			width:25%;
+	    			left:38%;
+	  			}	
 			}
 			h3{
 				font-size:$smallFont;
-				margin:10px 0 70px 0;
+				margin:10% 0 70px 0;
+			}
+			.form{
+				width:100%;
 			}
 			p{
 				font-size:$tinyFont;
