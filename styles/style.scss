@@ -40,8 +40,16 @@ html,body{
 
 	img{
 		margin-top:80px;
-		width:25%;
+		width:150px;
+		height:300px;
 	}
+	#logoGauche{
+		margin-right:-3px;
+	}
+	#logoDroite{
+		margin-left:-3px;
+	}
+
 	h1{
 		font-size:$smallFont;
 		position:absolute;
