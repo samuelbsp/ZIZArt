@@ -17,7 +17,7 @@
 <body>
 	<header>
 		<nav>
-			<h1 id="titrePrincipal" class="titreSite titreIntro">ZiZArt</h1>
+			<a href="index.html"><h1 id="titrePrincipal" class="titreSite titreIntro">ZiZArt</h1></a>
 			<ul clas="navPrincipal">
 				<a href="#contact"><li id="li1" class="nav navIntro">Contact</li></a>
 				<a href="#temoignages"><li id="li2" class="nav navIntro">Témoignages</li></a>
@@ -30,9 +30,10 @@
 	<div class="conteneurPrincipal">
 		<div class="contenu" id="partieGauche">
 			<div class="texteGauche">
-				<img id="logo" src="images/logo.png">
-				<h2 class="titrePrincipal">Ateliers Créatifs</h2>
-				<img id="aPropos" src="images/personnage1.jpg" alt="" class="personnages" id="personnage1">
+				<div id="sectionLogo">
+					<img id="logo" src="images/logo.png">
+				</div>
+				<img id="aPropos" src="images/personnage1.png" alt="" class="personnages" id="personnage1">
 				<h3 class="titreSection">À propos de l'artiste</h3>
 				<div id="moi">
 				<p class="texteMoi">Je suis animatrice certifiée en journal créatif depuis mai 2013, je suis aussi une artiste autodidacte et depuis 2010, j’ai reçu un diagnostic de            fibromyalgie.  Jusqu’à tout récemment, j’exerçais aussi comme thérapeute en relation d’aide par l’approche non-directive créatrice. Toutes ces formations professionnelles et expériences de vie combinées font de moi une personne, une artiste et une animatrice dotée d’une grande sensibilité et d’un grand respect devant la douleur et la souffrance d’autrui.</p>
@@ -41,7 +42,7 @@
 			</div>	
 			<div class="sectionsBg" id="journal">
 				<div class="texteGauche">	
-					<img id="journalCreatif" src="images/personnage2.jpg" alt="" class="personnages">
+					<img id="journalCreatif" src="images/personnage2.png" alt="" class="personnages">
 					<h3 class="titreSection">Le Journal Créatif</h3>
 					<h4 class="titreParagraphe">Le Journal Créatif :</h4>
 					<p class="texteSection">Le Journal Créatif mc est une méthode de connaissance de soi non- conventionnelle alliant le dessin, l’écriture, le collage et la créativité.  Cette méthode, créée par Anne-Marie Jobin, s’inspire de notions de psychologie, d’art-thérapie, de diverses techniques pour stimuler la créativité et l’écriture créative. Le Journal créatif a pour objectif le développement de la personne; c’est un outil concret, flexible, facile à utiliser et accessible à tous.  </p>
@@ -83,7 +84,7 @@
 			</div>
 			<div class="finBg"></div>
 			<div class="texteGauche">	
-				<img id="couts" src="images/dragon.png" alt="" class="personnages grosPersonnages">
+				<img id="couts" src="images/dragon.png" alt="" class="grosPersonnages">
 				<h3 class="titreSection">Tarifs et horaires:</h3>
 				<img src="images/tarifs.jpg" class="tarifs" alt="Tarifs">
 				<ul class="informations">
@@ -111,14 +112,20 @@
 						<p class="textesTemoignages">« Moi qui suis habituée à animer des groupes d’entraide, je trouve que cette méthode est douce et porteuse de grands moments de satisfaction intérieure.  Les messages qui viennent des participants sont à la fois profonds et source de joie.  Les vécus douloureux peuvent s’exprimer plus facilement et de manière plus positive par le dessin et les couleurs. […]  J’en ressors grandie à chaque fois.  Chaque image vaut mille maux/mots.  Je le (La méthode du Journal Créatif) recommande sans réserve.    </p>
 						<p class="auteurTemoignages">– Ginette Lacourse  (AFIM)</p>
 						<p class="textesTemoignages">« Je voudrais dire «Merci!» car j’ai enfin pu mettre des mots sur un cri au fond de moi, pas seulement de douleur mais aussi de désir d’être présente pour moi!  Cette découverte aurait pu être très longue et difficile à faire seule.  Tous les exercices m’ont apportés des pistes de réflexion,  ton accueil et ta grande disponibilité (de l’animatrice) ont grandement aidé.  J’aurais aimé en profiter encore mais ce que j’ai appris me suivra pour toujours.   </p>
-						<p class="auteurTemoignages">- Anonyme</p>
+						<p  id="contact" class="auteurTemoignages">- Anonyme</p>
 					</div>
 				</div>	
 			<footer>
-				<img id="contact" src="images/masques.png" alt="" class="personnageFooter">
+				<img src="images/masques.png" alt="" class="personnageFooter">
 				<h3 class="titreFooter">Contact</h3>
 				<div class="form">
-					
+					<p class="titreForm">Salutations,</p>
+					<form action="MAILTO:YourAdress@gmail.com" method="post" enctype="text/plain">
+        			<input type="prenom" name="prenom" placeHolder="Prenom" id="formPrenom" class='lesForm formPetite' />
+        			<input type="nom" name="nom" placeHolder="Nom" id="formNom" class='lesForm formPetite' />
+        			<input type="email" name="email" placeHolder="Couriel" id="formAdresse" class='lesForm formGrosse' />
+        			<textarea type='comment' placeHolder="Message" name="message" class="lesForm" id="formMessage"></textarea>
+        			</form>
 				</div>
 				<p>ZIZA - Isabelle Côté</p>
 				<p>creationzizart@hotmail.com</p>

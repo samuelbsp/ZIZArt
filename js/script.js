@@ -10,6 +10,13 @@ $("#partieDroite").getNiceScroll().hide();
   var images= $('#partieDroite');
   var imageRajoute =0;
 
+  logoCentre();
+  $(window).resize(function(e){
+    logoCentre();
+  });
+  window.onload = function(){
+      logoCentre();
+  }
   setTimeout(function(){
     $( "#titrePrincipal" ).removeClass( "titreIntro" );
   },200);
@@ -90,6 +97,14 @@ function supprimerImages(){
     if(imageRajoute>3){
   $('.conteneurImages').children('ul:first-child').remove();
   }
+}
+
+function logoCentre(){
+  var hauteurFenetre = $(window).height();
+
+  $( "#sectionLogo" ).css( "height", hauteurFenetre);
+  var hauteurMargeLogo = $(window).height()/2- $( "#logo" ).height()/2+30;
+  $( "#logo" ).css( "padding-top", hauteurMargeLogo);
 }
 
 });
