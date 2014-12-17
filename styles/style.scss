@@ -37,65 +37,44 @@ html,body{
 	background-color:#e9e9e9;
 	text-align:center;
 	
-	#blocHaut{
-		position:absolute;
-		top:0;
+	#test{
 		width:100%;
-		height:80%;
-		z-index:15;
-	}
-	.partieEcran{
-		width:50%;
 		height:100%;
 		position:absolute;
-		top:0;
-		z-index:10;
-		@include transition(1500ms);
 	}
-	.partieEcran:hover{
-		background-color:rgba(0,0,0,0.1);
-		@include transition(1500ms);
+	#Parallax{
+        height: 50%;
+        margin-top:150px;
+        overflow: hidden;
+        position: relative;
+        width: 30%;
+        margin:0 auto;
 	}
-	#droite{
-		left:50%;
-	}
-	#gauche:hover > #logoGauche{
-		margin-right:300px;
-		@include transition(1500ms);
-	}
-	#droite:hover > #logoDroite{
-		margin-left:300px;
-		@include transition(1500ms);
-	}
-	img{
-		margin-top:80px;
-		width:150px;
-		height:300px;
-		@include transition(1500ms);
-	}
-	#logoGauche{
-		float:right;
-	}
-	#logoDroite{
-		float:left;
-	}
-	#partieEcranBas{
-		position:absolute;
-		bottom:0;
-		width:100%;
-		height:20%;
-		border-top:2px solid white;
+	#Parallax img{
+		position: absolute;
+		width:60%;
+		left:10%;
+        top: 0;
+       	//@include transition(00ms);
 	}
 	h1{
 		font-size:$smallFont;
 		position:absolute;
-		bottom:65px;
+		bottom:85px;
+		@include transition(500ms);
 	}
 	.titreGauche{
-		left:40px;
+		left:100px;
 	}
 	.titreDroite{
-		right:40px;
+		right:100px;
+	}
+	a {
+		color:black;
+	}
+	h1:hover{
+		bottom:90px;
+		@include transition(500ms);
 	}
 }
 header{
@@ -391,7 +370,7 @@ header{
 		}
 	}
 	#partieDroite{
-		background-color:black;
+		background-color:white;
 		width:50%;
 
 		@media #{$tablet} {
@@ -406,4 +385,16 @@ header{
 			float:left;
 		}
 	}
+	.imagesGauche{
+		width:50%;
+		height:75%;
+		float:left;
+	}
+	.titreGallerie{
+		font-size:$smallFont;
+		font-weight:100;
+		padding:130px 0 50px 0;
+		text-align:center;
+	}
+
 }

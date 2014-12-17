@@ -33,15 +33,18 @@ $("#partieDroite").getNiceScroll().hide();
   setTimeout(function(){
     $( "#li5" ).removeClass( "navIntro" );
   },1300);
+  setTimeout(function(){
+    $( "#li6" ).removeClass( "navIntro" );
+  },1600);
   
- $('a').click(function() {
+ $('.navScroll').click(function() {
         $.smoothScroll({
             scrollElement: $('#partieGauche'),
             scrollTarget: $(this).attr('href')
         });
         return false;
     });
-  $('a').click(function() {
+  $('.navScroll').click(function() {
         $.smoothScroll({
             scrollElement: $('#partieDroite'),
             scrollTarget: $(this).attr('href')
