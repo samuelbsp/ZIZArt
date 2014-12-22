@@ -205,13 +205,16 @@ header{
 	    			width:90%;
 	    			padding:0 5% 0 5%;
 	    			margin-top:20px;
-	  			}	
+	  			}
 
 			}
 			.texteMoi:last-child{
 				padding:0 0 0 5%;
 			}
 		}
+			 .texteMoiLast{
+				margin-bottom:100px;	
+			}		
 		.sectionsBg{
 			background-image:url(../images/bgGris.png);
 			background-size:100% 100%;
